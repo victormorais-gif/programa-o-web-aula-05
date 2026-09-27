@@ -1,0 +1,30 @@
+{
+  "name": "projeto-courses-modules-nnm",
+  "version": "1.0.0",
+  "description": "Relacionamento N:N entre Courses e Modules com Prisma.js",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "create:course": "ts-node src/scripts/createCourse.ts",
+    "create:module": "ts-node src/scripts/createModule.ts",
+    "associate": "ts-node src/scripts/associateModuleToCourse.ts",
+    "list:courses": "ts-node src/scripts/listCoursesWithModules.ts",
+    "list:modules": "ts-node src/scripts/listModulesWithCourses.ts",
+    "remove:module": "ts-node src/scripts/removeModuleFromCourse.ts"
+  },
+  "keywords": ["prisma", "n:n", "courses", "modules"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.7.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.7.1",
+    "typescript": "^5.2.2",
+    "ts-node": "^10.9.1",
+    "@types/node": "^20.5.9"
+  }
+}
